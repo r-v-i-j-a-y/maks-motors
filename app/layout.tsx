@@ -2,16 +2,22 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
+
+// const poppins = localFont({
+//   src: "./fonts/Poppins-Regular.ttf",
+//   variable: "--font-poppins",
+//   // weight: "700",
+// });
 
 export let metadata: Metadata = {
   title: "Create Next App",
@@ -25,11 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className="bg-white"
-      >
-        {children}
-      </body>
+      <body className="bg-white">{children}</body>
     </html>
   );
 }

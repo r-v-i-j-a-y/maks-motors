@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import logo from "../images/maks-car-care-logo.webp";
@@ -7,10 +8,14 @@ import locationIcon from "../images/locationIcon.webp";
 import carIcon from "../images/carIcon.webp";
 import serviceIcon from "../images/ServiceIcon.webp";
 
+//icon
+import { IoMdAdd } from "react-icons/io";
+import { IoAdd } from "react-icons/io5";
+
 export default function Hero() {
   return (
     <>
-      <div className="hero-container overflow-hidden">
+      <section className="hero-container overflow-hidden p-5">
         <div className="hero">
           <div className="sm:flex items-start justify-between w-full py-5 px-5 sm:px-10 ">
             <Image src={logo} className="w-28 " alt="mark-motors-logo"></Image>
@@ -120,7 +125,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

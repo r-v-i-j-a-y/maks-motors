@@ -1,13 +1,25 @@
-import Image from "next/image";
 import Hero from "./components/Hero";
-import logo from "./images/maks-car-care-logo.webp"
+import Whatwedo from "./components/Whatwedo";
+import Whymaks from "./components/Whymaks";
+import Whymakscarcare from "./components/Whymakscarcare";
+import Expertin from "./components/Expertin";
+import Footer from "./components/footer";
+import Faqdata from "./components/Faqdata";
+
+// import { Poppins } from "next/font/google";
 
 
 export default function Home() {
   return (
     <div className="relative">
-      <main className="p-2" >
+      <main className="font-abc">
         <Hero />
+        <Whatwedo />
+        <Whymaks />
+        <Whymakscarcare />
+        <Expertin />
+        <Faqdata/>
+        <Footer/>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         {/* <a
