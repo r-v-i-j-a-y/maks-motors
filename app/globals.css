@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --background: #fafafa;
   --foreground: #171717;
@@ -17,26 +16,37 @@
   }
 }
 
+h1 {
+  @apply text-5xl md:text-6xl lg:text-7xl sm:mb-10 leading-tight;
+}
+h2 {
+  @apply text-3xl md:text-5xl my-6 md:my-7 lg:my-8 leading-tight;
+}
+h3 {
+  @apply text-3xl md:text-4xl my-4 md:my-5 lg:my-6 leading-tight font-semibold;
+}
+h4 {
+  @apply text-2xl md:text-3xl my-5 md:my-5 lg:my-5 leading-tight font-semibold;
+}
+h5 {
+  @apply text-xl sm:text-2xl md:text-2xl lg:text-2xl my-2 leading-tight lg:my-4 font-semibold;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
   .hero {
-    background-image: url("./images/maks-hero-banner.webp") !important;
+    /* background-image: url("../public/images/maks-hero-banner.webp"); */
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: right;
+    background-repeat: no-repeat;
     border-radius: 25px;
-    /* ul{
-        li{
-          padding: 10px 20px;
-          border-radius: 5px;
-        }
-      } */
   }
   .servives {
-    background-image: url("./images/mark-logo-eye.webp");
+    background-image: url("../public/images/mark-logo-eye.webp");
     width: 100%;
     height: 100%;
     background-size: contain;
@@ -58,6 +68,19 @@ body {
     }
   }
 }
+
+@media (max-width: 639px) {
+  body {
+    .hero {
+      border-radius: 0;
+      background-image: url("../public/images/maks-hero-banner-2.webp");
+      background-color: #6d5b44;
+      background-position: top;
+      background-size: contain;
+    }
+  }
+}
+
 @layer components {
   .btn-container {
     @apply w-full rounded-lg p-3 text-sm;

@@ -27,11 +27,9 @@ import Faq from "./faq";
 export default function Faqdata() {
   return (
     <>
-      <section className=" p-10 bg-[#F9F9F9]">
-        <div className=" mx-auto  container w-2/3">
-          <h1 className="text-center text-black text-5xl p-10 font-semibold">
-            FAQ
-          </h1>
+      <section className=" p-10 ">
+        <div className="sm:px-20 sm:container mx-auto">
+          <h2 className="text-center p-5 font-semibold">FAQ</h2>
           <ul>
             {faq_array.map((item, index) => {
               return (

@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { IoAdd } from "react-icons/io5";
-import { HiMinusSmall } from "react-icons/hi2";
-
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 
 export default function Faq({
   title,
@@ -17,25 +16,23 @@ export default function Faq({
     <>
       <li
         className={`${
-          is_open_faq ? "bg-why_maks_color_1" : "text-black"
-        } + border p-4 m-5 rounded-xl  mx-auto flex cursor-pointer faq_container transition ease-in-out `}
+          is_open_faq ? "bg-[#404040] text-white" : "text-black"
+        } + border p-4 m-5 rounded-xl flex cursor-pointer  transition ease-in-out `}
         onClick={() => set_is_open_faq(!is_open_faq)}
       >
         <div>
-          <IoAdd
-            size={32}
-            color="#FFB800"
+          <AddIcon
+            sx={{ color: "#FFB800", fontSize: 32 }}
             className={`${is_open_faq ? "hidden" : "block"}`}
           />
-          <HiMinusSmall
-            size={32}
-            color="#FFB800"
+          <RemoveIcon
+            sx={{ color: "#FFB800", fontSize: 32 }}
             className={`${is_open_faq ? "block" : "hidden"}`}
           />
         </div>
         <div className="ms-3 ease-in-out">
-          <h1 className="font-semibold mt-1">{title}</h1>
-          <p className={`${is_open_faq ? "block" : "hidden"} text-sm pt-3 `}>
+          <h6 className="font-semibold mt-1">{title}</h6>
+          <p className={`${is_open_faq ? "block" : "hidden"} text-sm mt-2`}>
             {content}
           </p>
         </div>
